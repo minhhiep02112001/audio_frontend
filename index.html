@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Clean HTML5 Audio Player</title>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="src/js/jquery.simpleaudioplayer.js"></script>
+<link rel="stylesheet" href="src/css/simpleaudioplayer.min.css">
+
+<script>
+
+	$(document).ready(function () {
+
+		$('#audio').simpleAudioPlayer({
+			chapters: [
+				{
+					'chap': 1,
+					"title": "<strong>Chapter 1:</strong> jQuery",
+					"src": "http://127.0.0.1:5500/audio.mp3"
+				},
+				{
+					'chap': 2,
+					"title": "<strong>Chapter 2:</strong> Plugin",
+					"src": "http://127.0.0.1:5500/audio_1.mp3"
+				},
+				{
+					'chap': 3,
+					"title": "<strong>Chapter 3:</strong> Audio",
+					"src": "http://127.0.0.1:5500/audio_2.mp3"
+				},
+			]
+		});
+
+
+
+	});
+</script>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #fafafa;
+		margin: 0;
+		padding: 0;
+	}
+
+	main {
+		text-align: center;
+		max-width: 1000px;
+		width: 90%;
+		margin: 150px auto;
+		padding: 2em;
+	}
+
+	.simpleAudioPlayer {
+		margin: 0 auto 2em auto;
+	}
+
+	a.chapterLink.active {
+		background: aqua;
+	}
+</style>
+
+<body>
+
+	<main>
+		<h1>Simple Clean HTML5 Audio Player</h1>
+		<audio id="audio" crossorigin="anonymous"></audio>
+	</main>
+
+</body>
+
+</html>
